@@ -15,8 +15,8 @@ Diviertete junto a nuestra Vidente Amira:<br>
 A DIVERTIRSE!!!!!!
 </p>
 
-![image](https://github.com/Luma2001/juegoadivinanza/assets/114626233/94f2eb8e-a3b3-4bbd-917d-63554943d8aa)
-  
+![Screenshot  JUEGO DE ADIVINANZA](https://github.com/Luma2001/juegoadivinanza/assets/114626233/0c0af426-24df-4dbb-a819-0b862489621b)
+
   
 <p>Contiene una pantalla, donde somos recibidos por Amira, la vidente. <br>
    Al presionar el botón juguemos aparece una alerta donde debemos ingresar el número.</p>
