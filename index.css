@@ -25,7 +25,7 @@ div{
     justify-content:center;
     align-items: center;
     width: 653px;
-    margin: 1em, auto;
+    margin: 2em, auto;
     overflow: hidden;
   
 }
@@ -36,6 +36,7 @@ h1, p, textarea{
     text-shadow: 5px 5px 5px black;
     line-height: 2em;
     text-align: center;
+   
 }
 
 button{
