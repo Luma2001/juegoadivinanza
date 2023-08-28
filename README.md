@@ -25,7 +25,7 @@ A DIVERTIRSE!!!!!!
 https://github.com/Luma2001/juegoadivinanza.git
 
 <h3>Proyecto Publicado:</h3>
-https://luma2001.github.io/juegoadivinanza/
+ https://luma2001.github.io/juegoadivinanza/
 
 <h3>Tecnologías Utilizadas:</h3>
 <p>JAVASCRIPT</p>
