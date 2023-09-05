@@ -1,42 +1,48 @@
-//Primero capturo el numero que el usuario ingresa
-const enterTextArea = document.querySelector(".numeroIngresado");
 
-//segundo captura el elemento que recibirá respuesta
-const exitTextArea = document.querySelector(".areaRespuesta");
-
-
+let contador = 1;
 
 function jugar(){
+    //Primero capturo el numero que el usuario ingresa
+    const enterTextArea = document.querySelector("#numeroIngresado");
+
+    //segundo captura el elemento que recibirá respuesta
+    const exitTextArea = document.querySelector(".areaRespuesta");
     const intentos = 3;
-    let contador = 1; 
+     
 
 
-    /**/
+    
     const numeroPensado = Math.round(Math.random()*10);
-            
-    while(contador<=intentos){
+           
 
-                let numeroLanzado = parseInt(enterTextArea.value);
-                let respPositiva = "FELICITACIONES...has Acertado!!!!!! en el intento " + contador+".";
-                if(numeroPensado == numeroLanzado){
-                    exitTextArea.value = respPositiva;
-                    break;
-                }
+    let numeroLanzado = parseInt(enterTextArea.value);
+     
 
-                if(numeroPensado != numeroLanzado){
-                    exitTextArea.value = "Lo siento, no adivinaste!!!!!! Concentrate más y vuelve a intentarlo";
-                    contador++;
-                }                
-    if(contador==4){
-        let respNegativa = "Lo siento, no adivinaste!!!!!! El número que pensé era "+ numeroPensado + ".";
-        exitTextArea.value = respNegativa;
+   /**/
+    if(numeroPensado == numeroLanzado){
+        exitTextArea.value = "FELICITACIONES...era el "+ numeroPensado + ", has Acertado!!!!!! en el intento " + contador+".";
+        contador=1;
     }
+
+    if(numeroPensado != numeroLanzado){
+        exitTextArea.value = "Lo siento, no adivinaste!!!!!! Concentrate más y vuelve a intentarlo. Te quedan: "+(3-contador)+".";
+        
+        if(contador==3){
+           exitTextArea.value = "Lo siento, no adivinaste!!!!!! El número que pensé era "+ numeroPensado + ".";
+            contador=1;
+        }
+    }   
+
+    contador++;
             
-}
-document.write(exitTextArea.value)
-return ;
+
+
 
 }
                 
                 
-      
+    /*
+      <input type="text" id="country_code" name="country_code"
+  pattern="[A-Za-z]{3}" title="Three letter country code">
+    
+  */

@@ -24,7 +24,7 @@ function jugar(){
                     let numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
 
                     if(numeroPensado == numeroLanzado){
-                        alert("FELICITACIONES...has Acertado!!!!!! en el intento " + contador+".")
+                        alert("FELICITACIONES...era el "+ numeroPensado + ", has Acertado!!!!!! en el intento " + contador+".")
                         break;
                     }
 

@@ -39,6 +39,15 @@ h1, p, textarea{
    
 }
 
+#numeroIngresado{
+background-color:violet;
+color:black;
+}
+
+#numeroIngresado::placeholder{
+    color:black;
+}
+
 button{
     font-size: 2em;
     width: 80%;
@@ -50,8 +59,13 @@ button{
 
 }
 
+button:hover{
+    color:white;
+    background-color: black;
+}
+
 textarea{
-    
+    width: 100%;
     background: none;
     border: none;
     
