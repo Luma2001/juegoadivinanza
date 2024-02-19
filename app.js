@@ -1,48 +1,73 @@
 
 let contador = 1;
+let numeroPensado = null;
+console.log(numeroPensado); 
 
-function jugar(){
-    //Primero capturo el numero que el usuario ingresa
+//Primero capturo el número que el usuario ingresa
     const enterTextArea = document.querySelector("#numeroIngresado");
 
-    //segundo captura el elemento que recibirá respuesta
+//segundo capturo el elemento que recibirá respuesta
     const exitTextArea = document.querySelector(".areaRespuesta");
-    const intentos = 3;
-     
 
+//Defino número de intentos
+    const intentos = 10;
 
-    
-    const numeroPensado = Math.round(Math.random()*10);
-           
+//Creo 3 funciones:    
+    function nuevo_numero(){
+        numeroPensado = Math.round(Math.random()*100);
+        console.log(numeroPensado);
+    }//function nuevo_numero: Amira piensa en un nuevo número. Entre 0 y 100
 
-    let numeroLanzado = parseInt(enterTextArea.value);
-     
-
-   /**/
-    if(numeroPensado == numeroLanzado){
-        exitTextArea.value = "FELICITACIONES...era el "+ numeroPensado + ", has Acertado!!!!!! en el intento " + contador+".";
+    function iniciar(){
+        document.getElementById('juegoActivo').style.display='block';
+        nuevo_numero(); 
         contador=1;
-    }
+        console.log(contador);
+        enterTextArea.value="";
+        exitTextArea.value ="";
+    }//fin function iniciar: reinicia los valores y activa un nuevo juego.
 
-    if(numeroPensado != numeroLanzado){
-        exitTextArea.value = "Lo siento, no adivinaste!!!!!! Concentrate más y vuelve a intentarlo. Te quedan: "+(3-contador)+".";
+    function jugar(){
         
-        if(contador==3){
-           exitTextArea.value = "Lo siento, no adivinaste!!!!!! El número que pensé era "+ numeroPensado + ".";
-            contador=1;
-        }
-    }   
+    /**/
+            //parseo de valor ingresado a entero para poder compararlo con el numeroPensado
+            let numeroLanzado = parseInt(enterTextArea.value);
 
-    contador++;
-            
-
-
-
-}
+            if(numeroPensado == numeroLanzado){
+                document.getElementById('juegoActivo').style.display='none';
+                exitTextArea.value = "FELICITACIONES...era el "+ numeroPensado + ", has Acertado!!!!!! en el intento " + contador+".";
+                enterTextArea.value="";
+                console.log(contador);  
                 
-                
-    /*
-      <input type="text" id="country_code" name="country_code"
-  pattern="[A-Za-z]{3}" title="Three letter country code">
-    
-  */
+            }else if(numeroPensado != numeroLanzado){
+                if(contador==intentos){
+                    document.getElementById('juegoActivo').style.display='none';
+                    exitTextArea.value = "Lo siento... PERDISTE!!!!!! El número que pensé era "+ numeroPensado + ".";
+                    exitTextArea.style.color='black';
+                    enterTextArea.value=="";
+                    console.log(contador);
+                    
+                    
+                } else{
+                    /*
+                    //primera versión del juego sin pistas
+                    exitTextArea.value = "Lo siento, no adivinaste!!!!!! Concentrate más y vuelve a intentarlo. Te quedan: "+(intentos-contador)+".";
+                    contador++;
+                    enterTextArea.value="";
+                    console.log(contador);
+                    */
+                //Se agrega las pistas
+                if(numeroPensado<numeroLanzado){
+                    exitTextArea.value = "Lo siento, no adivinaste!!!!!! Pensé en un número menor. Concentrate más y vuelve a intentarlo. Te quedan: "+(intentos-contador)+".";
+                    contador++;
+                    enterTextArea.value="";
+                    console.log(contador);
+                } else{
+                    exitTextArea.value = "Lo siento, no adivinaste!!!!!! Pensé en un número mayor. Concentrate más y vuelve a intentarlo. Te quedan: "+(intentos-contador)+".";
+                    contador++;
+                    enterTextArea.value="";
+                    console.log(contador);
+                }
+                }
+            }    
+    } //fin function jugar: lógica del juego       

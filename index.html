@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="app.js" defer></script>
     <title>JUEGO DE ADIVINANZA</title>
-
 </head>
 
 <body>
@@ -15,26 +15,30 @@
             <h1>JUEGO DE ADIVINANZA</h1>
             <p>Hola, bienvenido Humano!!!</p>
             <p>Soy Amira, la Vidente.</p>
-            <p>Conectemos nuestras mentes, cierra los ojos y adivina en qué número estoy pensando...</p>
-            
+            <p>Conectemos nuestras mentes, cierra los ojos y adivina en qué número estoy pensando...</p>   
         </div>
         <!---->
-        <section class="entrada">
-            <textarea id="numeroIngresado" cols="30" rows="1" placeholder="Ingresa un número entre 1 y 10"></textarea>
-        </section>
-        
         <div>
-            <button id="btnJugar" onclick="jugar()">¡ JUGUEMOS !"</button>
+            <button id="btnIniciar" onclick="iniciar()">¡ Iniciar nueva partida!</button>
         </div>
-        <section class="salida">
-            <textarea class="areaRespuesta" readonly></textarea><!--Área para mostrar respuesta-->
+        <!---->
+        <section id="juegoActivo">
+            <section class="entrada">
+                <textarea id="numeroIngresado" cols="30" rows="1" placeholder="Ingresa un número entre 0 y 100"></textarea>
+            </section>
+            <!---->
+            <div>
+                <button id="btnJugar" onclick="jugar()">¡ JUGUEMOS !</button>
+            </div>
         </section>
-       
+        <!---->
+        <section class="salida">
+            <textarea class="areaRespuesta" rows="4" readonly></textarea><!--Área para mostrar respuesta-->
+        </section>
+        <!---->
         <div id="contacto">
             <p>Juego desarrollado por: <a href="https://github.com/Luma2001/"><img id="luma" src="./images/luma.png"></a></p>
         </div>
-    </main>
-
-   
+    </main>   
 </body>
 </html>
