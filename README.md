@@ -19,11 +19,11 @@ A DIVERTIRSE!!!!!!
 ![image](https://github.com/Luma2001/juegoadivinanza/assets/114626233/fff8f5a7-6634-490a-9646-69bef0b03e6a)
 
 
-![Screenshot  JUEGO DE ADIVINANZA](https://github.com/Luma2001/juegoadivinanza/assets/114626233/8b370292-04c7-4dcb-8e6c-8dbb85679f9d)
-
 <p>Contiene una pantalla, donde somos recibidos por Amira, la vidente. <br>
    Al presionar el botón "Iniciar nueva partida" se habilita el panel para empezar a jugar.<br>
    Cada vez que presionamos este botón, se reinicia el juego. </p>
+   
+![image](https://github.com/Luma2001/juegoadivinanza/assets/114626233/21cc12fe-5868-4723-b369-395ceaf8ca20)
   
       
 <h3>Acceso al Código:</h3>
@@ -39,6 +39,9 @@ https://github.com/Luma2001/juegoadivinanza.git
 <p>Corelphotoshop</p>
 
 <h3>Sobre el diseño del personaje:</h3>
+
+![image](https://github.com/Luma2001/juegoadivinanza/assets/114626233/e805faa3-b3d0-4e56-8dca-5e575fab8871)
+
 <p>Este hermoso personaje fue generado con Microsoft Designer y editado en Corelphotoshop.</p>
 <h3>Desarrolladora del Proyecto:</h3>
 
