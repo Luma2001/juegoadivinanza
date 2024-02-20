@@ -1,0 +1,16 @@
+{
+  "name": "juegoadivinanza",
+  "version": "1.0.0",
+  "description": "<em># juegoadivinanza<em><br>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "Luma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
