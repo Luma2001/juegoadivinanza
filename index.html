@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/app.js" defer></script>
+    <title>JUEGO DE ADIVINANZA</title>
+</head>
+
+<body>
+    <main>
+        <section id="saludos">
+            <h1>JUEGO DE ADIVINANZA</h1>
+            <br>
+            <p>Hola, bienvenido Humano!!!</p>
+            <p>Soy Amira, la Vidente.</p>
+            <p>Conectemos nuestras mentes, <br>cierra los ojos 👁👁<br>
+                 y adivina en qué número estoy pensando...</p>   
+            <button id="btnIniciar" onclick="iniciar()">¡ Iniciar nueva partida!</button>      
+        </section>
+
+    <!---->
+        <section id="juegoActivo">
+            <!---->        
+            <div class="entrada">
+                <input id="numeroIngresado" placeholder="Ingresa un número entre 0 y 100." title="Ingresa un número y haz click en JUGUEMOS"></input>
+            </div>
+            <!---->
+            <button id="btnJugar" onclick="jugar()">¡ JUGUEMOS !</button>
+        </section>
+    <!---->
+        <section class="salida">
+            <!--Área para mostrar respuesta-->
+        </section>
+    <!---->
+        <section id="contacto">
+            <p>Juego desarrollado por: <a href="https://github.com/Luma2001/"><img id="luma" src="./images/luma.png"></a></p>
+        </section>
+    </main>   
+</body>
+</html>
