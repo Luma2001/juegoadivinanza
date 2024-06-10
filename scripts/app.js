@@ -48,7 +48,7 @@
 
             if(numeroPensado == numeroLanzado){
                 document.getElementById('juegoActivo').style.display='none';
-                const texto = `FELICITACIONES...era el ${numeroPensado}, has Acertado!!!!!! en el intento ${contador}.`;
+                const texto = `FELICITACIONES... era el ${numeroPensado}, has Acertado!!!!!! en el intento ${contador}.`;
                 mensaje(texto);
                 enterTextArea.value="";
                 console.log(contador);  
@@ -98,3 +98,5 @@
                 }
             }    
     } //fin function jugar: lógica del juego.       
+
+    
