@@ -4,41 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./scripts/app.js" defer></script>
     <title>JUEGO DE ADIVINANZA</title>
 </head>
 
 <body>
     <main>
-        <div id="saludos">
+        <section id="saludos">
             <h1>JUEGO DE ADIVINANZA</h1>
+            <br>
             <p>Hola, bienvenido Humano!!!</p>
             <p>Soy Amira, la Vidente.</p>
-            <p>Conectemos nuestras mentes, cierra los ojos y adivina en qué número estoy pensando...</p>   
-        </div>
-        <!---->
-        <div>
-            <button id="btnIniciar" onclick="iniciar()">¡ Iniciar nueva partida!</button>
-        </div>
-        <!---->
+            <p>Conectemos nuestras mentes, <br>cierra los ojos 👁👁<br>
+                 y adivina en qué número estoy pensando...</p>   
+            <button id="btnIniciar" onclick="iniciar()">¡ Iniciar nueva partida!</button>      
+        </section>
+
+    <!---->
         <section id="juegoActivo">
-            <section class="entrada">
-                <textarea id="numeroIngresado" cols="30" rows="1" placeholder="Ingresa un número entre 0 y 100"></textarea>
-            </section>
-            <!---->
-            <div>
-                <button id="btnJugar" onclick="jugar()">¡ JUGUEMOS !</button>
+            <!---->        
+            <div class="entrada">
+                <input id="numeroIngresado" placeholder="Ingresa un número entre 0 y 100." title="Ingresa un número y haz click en JUGUEMOS"></input>
             </div>
+            <!---->
+            <button id="btnJugar" onclick="jugar()">¡ JUGUEMOS !</button>
         </section>
-        <!---->
+    <!---->
         <section class="salida">
-            <textarea class="areaRespuesta" rows="4" readonly></textarea><!--Área para mostrar respuesta-->
+            <!--Área para mostrar respuesta-->
         </section>
-        <!---->
-        <div id="contacto">
+    <!---->
+        <section id="contacto">
             <p>Juego desarrollado por: <a href="https://github.com/Luma2001/"><img id="luma" src="./images/luma.png"></a></p>
-        </div>
+        </section>
     </main>   
 </body>
 </html>

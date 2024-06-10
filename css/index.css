@@ -9,32 +9,35 @@
  
 
 body{
-    background:url('./images/fondo.png') no-repeat center center/cover;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    background:url('../images/fondo.png') no-repeat center center/cover;
     height: 100vh;
-    text-align: center;
-    
 }
 
-
-div{
+main{
     display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end ;
+    text-align: center;
+    padding: 15px;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    width: 600px;
+    justify-content: center;
+    width: 55vw;
     margin: 2em, auto;
     overflow: hidden;
-  
+    gap:5px;
 }
 
 
 
-h1, p, textarea{
+h1, p, input{
     color:azure;
-    font-size: 1.4em;
+    /* font-size: 1.4em; */
     text-shadow: 5px 5px 5px black;
     line-height: 2em;
     text-align: center;
@@ -56,7 +59,7 @@ color:black;
 
 button{
     font-size: 2em;
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
     margin: 15px 0;
     text-shadow: 5px 5px 5px black;
@@ -69,20 +72,38 @@ button:hover{
     color:white;
     background-color: black;
 }
-
-textarea{
+input{
     width: 90%;
-    background: none;
-    border: none;
-    
+    height: 50px;
+}
+
+.mensaje{
+    color: black;
+    font-weight: bolder;
 }
 
 #contacto p{
     text-align: right;
     align-items: end;
     font-size: 15px;
+    color: wheat
 }
 
 #luma{
     width: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+    section{
+    width: 90vw;    
+    }
+    button{
+        font-size: 1em;
+    }
+    p{
+        color:midnightblue;
+        text-shadow: 2px 2px 2px blue;
+    }
+    
 }
